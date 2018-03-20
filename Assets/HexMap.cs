@@ -10,8 +10,15 @@ public class HexMap : MonoBehaviour {
     }
 
     public GameObject HexPrefab;
-    public int NumRows = 20;
-    public int NumColumns = 40;
+
+    public Sprite ForestSprite;
+    public Sprite WaterSprite;
+    public Sprite PlainsSprite;
+    public Sprite DeserSprite;
+    public Sprite MountainSprite;
+
+    public int NumRows = 30;
+    public int NumColumns = 60;
 
     public void GenerateMap()
     {
@@ -24,6 +31,11 @@ public class HexMap : MonoBehaviour {
                 var hexGO = (GameObject)Instantiate(HexPrefab, h.PositionFromCamera(Camera.main.transform.position, NumRows, NumColumns), Quaternion.identity, this.transform);
                 hexGO.GetComponent<HexComponent>().Hex = h;
                 hexGO.GetComponent<HexComponent>().HexMap = this;
+
+                hexGO.GetComponentInChildren<TextMesh>().text = string.Concat(column, ',', row);
+
+                SpriteRenderer sr = hexGO.GetComponentInChildren<SpriteRenderer>();
+                sr.sprite = WaterSprite;
             }
         }
     }
