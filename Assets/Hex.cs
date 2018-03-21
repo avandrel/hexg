@@ -7,6 +7,7 @@ public class Hex {
     public readonly int Q;
     public readonly int R;
     public readonly int S;
+    public float Elavation;
 
     private static readonly float WIDTH_MULTIPLIER = Mathf.Sqrt(3) / 2;
     private readonly float radius = 1f;
@@ -47,4 +48,6 @@ public class Hex {
 
         return position;
     }
+
+    public static float Distance(Hex a, Hex b) => Mathf.Max(Mathf.Abs(a.Q - b.Q), Mathf.Abs(a.R - b.R), Mathf.Abs(a.S - b.S));
 }

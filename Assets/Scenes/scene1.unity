@@ -113,53 +113,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1428660001
+--- !u!1 &410543327
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1428660003}
-  - component: {fileID: 1428660002}
+  - component: {fileID: 410543329}
+  - component: {fileID: 410543328}
   m_Layer: 0
-  m_Name: HexMap
+  m_Name: HexMap_Continent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1428660002
+--- !u!114 &410543328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428660001}
+  m_GameObject: {fileID: 410543327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47af0d4448ad4ea47b10571275f5bbe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 244150522c1ae374c985d426d6d796cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HexPrefab: {fileID: 1419180912992982, guid: 4eb0188314ad0654799aeed46dc22011, type: 2}
   ForestSprite: {fileID: 21300000, guid: 2812c4b4a7ea6dd4abc97e344b1c1299, type: 3}
   WaterSprite: {fileID: 21300000, guid: 1ccf08977f0d296498b671390af4f388, type: 3}
   PlainsSprite: {fileID: 21300000, guid: 4b9d652e06616e144b5f146a2df04cb8, type: 3}
-  DeserSprite: {fileID: 21300000, guid: 59a653e3d46f1fa479f3360d34388348, type: 3}
+  DesertSprite: {fileID: 21300000, guid: 59a653e3d46f1fa479f3360d34388348, type: 3}
   MountainSprite: {fileID: 21300000, guid: 2a379d47ab755c6408fd20dac3bff493, type: 3}
-  NumRows: 20
-  NumColumns: 40
---- !u!4 &1428660003
+  MountainHeight: 0.85
+  ForestHeight: 0.6
+  PlainsHeight: 0
+  NumRows: 30
+  NumColumns: 60
+--- !u!4 &410543329
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428660001}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 410543327}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1504684106
 GameObject:
@@ -203,7 +206,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -241,7 +244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1504684111
 MonoBehaviour:
