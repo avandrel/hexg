@@ -21,8 +21,8 @@ public class HexMap : MonoBehaviour {
     public float ForestHeight = 0.6f;
     public float PlainsHeight = 0.0f;
 
-    public int NumRows = 30;
-    public int NumColumns = 60;
+    public static int NumRows = 30;
+    public static int NumColumns = 60;
 
     private Hex[,] hexes;
     private Dictionary<Hex, GameObject> hexToGOMap = new Dictionary<Hex, GameObject>();
@@ -35,7 +35,7 @@ public class HexMap : MonoBehaviour {
         {
             for (int row = 0; row < NumRows; row++)
             {
-                Hex h = new Hex(column, row) { Elavation = -0.5f };
+                Hex h = new Hex(this, column, row) { Elavation = -0.5f };
 
                 hexes[column, row] = h;
 
